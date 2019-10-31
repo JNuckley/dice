@@ -16,6 +16,6 @@ describe Dice do
   it "Multiple dice can be thrown at once" do
     dice = Dice.new
     dice.no_of_dice(3)
-    expect(dice.result.count).to eq 3
+    expect(dice.final_result.count).to eq 3
   end
 end
