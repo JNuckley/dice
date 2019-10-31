@@ -12,5 +12,10 @@ describe Dice do
   it "Dice rolling returns a number between 1 and 6" do
     dice = Dice.new
     expect(dice.roll).to be_between(1, 6).inclusive
-end
+  end
+  it "Multiple dice can be thrown at once" do
+    dice = Dice.new
+    dice.no_of_dice(3)
+    expect(dice.result.count).to eq 3
+  end
 end
